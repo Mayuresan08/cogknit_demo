@@ -44,13 +44,14 @@ grid-gap: 1rem;
 `
 
 const Block=styled.div`
-height: 2rem;
-width: 2rem;
-background-color: blue;
+height: 3rem;
+width: 3rem;
+background-color: grey;
 justify-content: center;
 align-items: center;
-padding: 5px;
-margin: 2rem;
+padding: 10px;
+margin: 1rem;
+border: 1px solid black;
 `
 
 function App() {
@@ -114,7 +115,7 @@ const handleBlock=(item)=>{
             {
               array.map((item)=>{
                 return (
-                  <Block onClick={(()=>{handleBlock(item)})}>{item}</Block>
+                  <Block onClick={(()=>{handleBlock(item)})}><p>{item}</p></Block>
                 )
               })
             }
